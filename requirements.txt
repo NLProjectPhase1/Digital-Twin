@@ -1,0 +1,7 @@
+Flask
+gTTS
+faster-whisper
+requests
+gdown
+pydub
+gunicorn

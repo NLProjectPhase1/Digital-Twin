@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: digital-twin
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+    startCommand: gunicorn app:app --timeout 120 --threads 2 --bind 0.0.0.0:$PORT
+    envVars:
+      - key: OPENROUTER_API_KEY
+        value: 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
+    plan: free
+    region: oregon
