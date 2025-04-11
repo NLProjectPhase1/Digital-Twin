@@ -1,6 +1,8 @@
 # Use a minimal Python image
 FROM python:3.10-slim
 
+RUN pip install --no-cache-dir -r requirements.txt
+
 # Install ffmpeg and system dependencies
 RUN apt-get update && \
     apt-get install -y ffmpeg git curl && \
